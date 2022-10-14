@@ -1,0 +1,49 @@
+﻿@using Arrba.Domain.Models
+@using PagedList.Core.Mvc
+@model PagedList.Core.PagedList<Arrba.Domain.Models.CategBrand>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<pager class="pager-container" list="@Model" options="@PagedListRenderOptions.Bootstrap4Full" />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Categ)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categ.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<pager class="pager-container" list="@Model" options="@PagedListRenderOptions.Bootstrap4Full" />

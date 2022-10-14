@@ -1,0 +1,245 @@
+﻿@model IEnumerable<Arrba.Domain.Models.AdVehicle>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimalPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewModelName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstalmentSelling)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomsCleared)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HotSelling)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExchangePossible)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImgJson)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FolderImgName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MapJsonCoord)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ViewCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImgExists)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateExpired)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastModified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsAutoUpdatable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModirationStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommentRestriction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModelVerification)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Condition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperCateg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Currency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dealership)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Region)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimalPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewModelName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstalmentSelling)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomsCleared)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HotSelling)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExchangePossible)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImgJson)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FolderImgName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MapJsonCoord)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViewCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImgExists)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateExpired)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastModified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsAutoUpdatable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModirationStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentRestriction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelVerification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Condition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SuperCateg.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categ.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Currency.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dealership.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Region.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

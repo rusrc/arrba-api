@@ -1,0 +1,14 @@
+.vs/
+
+**/bin/**
+**/obj/**
+
+**/packages/**
+!Arrba/wwwroot/
+**/node_modules/
+Arrba/Arrba.Api.xml
+Arrba/wwwroot/tempImages/
+Arrba/wwwroot/Uploads/
+Arrba.Api/wwwroot/Uploads/AdvImages/
+Arrba.Api/wwwroot/tempImages/
+global.json

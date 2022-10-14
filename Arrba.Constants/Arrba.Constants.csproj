@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Arrba.Enumerations\Arrba.Enumerations.csproj" />
+    <ProjectReference Include="..\Arrba.Exceptions\Arrba.Exceptions.csproj" />
+  </ItemGroup>
+
+</Project>

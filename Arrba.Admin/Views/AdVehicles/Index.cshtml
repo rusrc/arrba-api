@@ -1,0 +1,166 @@
+﻿@using Arrba.Domain.Models
+@using PagedList.Core.Mvc
+@model PagedList.Core.PagedList<AdVehicle>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<pager class="pager-container" list="@Model" options="@PagedListRenderOptions.Bootstrap4Full" />
+<div style="overflow: scroll;">
+    <table class="table ">
+        @if (Model.Any())
+        {
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Year)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].MinimalPrice)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].ViewCount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].ImgExists)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].AdStatus)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].IsAutoUpdatable)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].ModirationStatus)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Condition)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].SuperCateg)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Categ)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].City)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Currency)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Type)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Brand)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Dealership)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Model)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].User)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].AddDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].DateExpired)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].LastModified)
+                    </th>
+                </tr>
+            </thead>
+        }
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <p> <a asp-action="Edit" asp-route-id="@item.ID">Edit</a></p>
+                        <p> <a asp-action="Details" asp-route-id="@item.ID">Details</a></p>
+                        <p><a asp-action="Delete" asp-route-id="@item.ID">Delete</a></p>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Year)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MinimalPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ViewCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ImgExists)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AdStatus)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsAutoUpdatable)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModirationStatus)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Condition)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SuperCateg.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Categ.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.City.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Currency.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Brand.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dealership.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Model.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateExpired)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastModified)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<pager class="pager-container" list="@Model" options="@PagedListRenderOptions.Bootstrap4Full" />
+

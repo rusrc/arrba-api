@@ -1,0 +1,16 @@
+<!--Root-->
+
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>https://rolf-probeg.ru/sitemap/news.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://rolf-probeg.ru/sitemap/msk.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://rolf-probeg.ru/sitemap/spb.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://rolf-probeg.ru/sitemap/cross-region.xml</loc>
+    </sitemap>
+</sitemapindex>

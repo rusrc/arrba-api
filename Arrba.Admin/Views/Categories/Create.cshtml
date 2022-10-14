@@ -1,0 +1,72 @@
+﻿@using Arrba.Domain.Models
+@model Arrba.Domain.Models.Category
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Category</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SuperCategID" class="control-label"></label>
+                <select asp-for="SuperCategID" class="form-control" asp-items="ViewBag.SuperCategID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategGroupID" class="control-label"></label>
+                <select asp-for="CategGroupID" class="form-control" asp-items="ViewBag.CategGroupID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Alias" class="control-label"></label>
+                <input asp-for="Alias" class="form-control" />
+                <span asp-validation-for="Alias" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HideModelField" /> @Html.DisplayNameFor(model => model.HideModelField)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FileName" class="control-label"></label>
+                <input asp-for="FileName" class="form-control" />
+                <span asp-validation-for="FileName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" asp-items="Html.GetEnumSelectList<ActiveStatus>()" class="form-control"></select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NameMultiLangSingularJson" class="control-label"></label>
+                <textarea asp-for="NameMultiLangSingularJson" class="form-control"></textarea>
+                <span asp-validation-for="NameMultiLangSingularJson" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NameMultiLangJson" class="control-label"></label>
+                <textarea asp-for="NameMultiLangJson" class="form-control"></textarea>
+                <span asp-validation-for="NameMultiLangJson" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

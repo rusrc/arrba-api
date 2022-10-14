@@ -1,0 +1,200 @@
+﻿@using Arrba.Domain.Models
+@model AdVehicleCreateEdit
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>AdVehicle</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label asp-for="UserID" class="control-label"></label>
+                        <select asp-for="UserID" class="form-control" asp-items="ViewBag.UserID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperCategID" class="control-label"></label>
+                        <select asp-for="SuperCategID" class="form-control" asp-items="ViewBag.SuperCategID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CategID" class="control-label"></label>
+                        <select asp-for="CategID" class="form-control" asp-items="ViewBag.CategID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="BrandID" class="control-label"></label>
+                        <select asp-for="BrandID" class="form-control" asp-items="ViewBag.BrandID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TypeID" class="control-label"></label>
+                        <select asp-for="TypeID" class="form-control" asp-items="ViewBag.TypeID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CityID" class="control-label"></label>
+                        <select asp-for="CityID" class="form-control" asp-items="ViewBag.CityID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="RegionID" class="control-label"></label>
+                        <select asp-for="RegionID" class="form-control" asp-items="ViewBag.RegionID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CountryID" class="control-label"></label>
+                        <input asp-for="CountryID" class="form-control" />
+                        <span asp-validation-for="CountryID" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CurrencyID" class="control-label"></label>
+                        <select asp-for="CurrencyID" class="form-control" asp-items="ViewBag.CurrencyID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Year" class="control-label"></label>
+                        <input asp-for="Year" class="form-control" />
+                        <span asp-validation-for="Year" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Price" class="control-label"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="MinimalPrice" class="control-label"></label>
+                        <input asp-for="MinimalPrice" class="form-control" />
+                        <span asp-validation-for="MinimalPrice" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="NewModelName" class="control-label"></label>
+                        <input asp-for="NewModelName" class="form-control" />
+                        <span asp-validation-for="NewModelName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="InstalmentSelling" /> @Html.DisplayNameFor(model => model.InstalmentSelling)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="CustomsCleared" /> @Html.DisplayNameFor(model => model.CustomsCleared)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="HotSelling" /> @Html.DisplayNameFor(model => model.HotSelling)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="ExchangePossible" /> @Html.DisplayNameFor(model => model.ExchangePossible)
+                        </label>
+                    </div>
+                </div>
+                <div class="col-6">                  
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <textarea asp-for="Description" class="form-control"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Comment" class="control-label"></label>
+                        <textarea asp-for="Comment" class="form-control"></textarea>
+                        <span asp-validation-for="Comment" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Title" class="control-label"></label>
+                        <input asp-for="Title" class="form-control" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ModelID" class="control-label"></label>
+                        <select asp-for="ModelID" class="form-control" asp-items="ViewBag.ModelID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DealershipId" class="control-label"></label>
+                        <select asp-for="DealershipId" class="form-control" asp-items="ViewBag.DealershipId"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ImgJson" class="control-label"></label>
+                        <input asp-for="ImgJson" class="form-control" />
+                        <span asp-validation-for="ImgJson" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FolderImgName" class="control-label"></label>
+                        <input asp-for="FolderImgName" class="form-control" />
+                        <span asp-validation-for="FolderImgName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ViewCount" class="control-label"></label>
+                        <input asp-for="ViewCount" class="form-control" />
+                        <span asp-validation-for="ViewCount" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="ImgExists" /> @Html.DisplayNameFor(model => model.ImgExists)
+                        </label>
+                    </div>
+                    @*<div class="form-group">
+                        <label asp-for="AddDate" class="control-label"></label>
+                        <input asp-for="AddDate" class="form-control" />
+                        <span asp-validation-for="AddDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DateExpired" class="control-label"></label>
+                        <input asp-for="DateExpired" class="form-control" />
+                        <span asp-validation-for="DateExpired" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LastModified" class="control-label"></label>
+                        <input asp-for="LastModified" class="form-control" />
+                        <span asp-validation-for="LastModified" class="text-danger"></span>
+                    </div>*@
+                    <div class="form-group">
+                        <label asp-for="AdStatus" class="control-label"></label>
+                        <select asp-for="AdStatus" asp-items="Html.GetEnumSelectList<ActiveStatus>()" class="form-control"></select>
+                        <span asp-validation-for="AdStatus" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IsAutoUpdatable" class="control-label"></label>
+                        <select asp-for="IsAutoUpdatable" asp-items="Html.GetEnumSelectList<ActiveStatus>()" class="form-control"></select>
+                        <span asp-validation-for="IsAutoUpdatable" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ModirationStatus" class="control-label"></label>
+                        <select asp-for="ModirationStatus" asp-items="Html.GetEnumSelectList<ModirationStatus>()" class="form-control"></select>
+                        <span asp-validation-for="ModirationStatus" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CommentRestriction" class="control-label"></label>
+                        <select asp-for="CommentRestriction" asp-items="Html.GetEnumSelectList<CommentRestriction>()" class="form-control"></select>
+                        <span asp-validation-for="CommentRestriction" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ModelVerification" class="control-label"></label>
+                        <select asp-for="ModelVerification" asp-items="Html.GetEnumSelectList<AdNeedModelVerification>()" class="form-control"></select>
+                        <span asp-validation-for="ModelVerification" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Condition" class="control-label"></label>
+                        <select asp-for="Condition" asp-items="Html.GetEnumSelectList<VehicleCondition>()" class="form-control"></select>
+                        <span asp-validation-for="Condition" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

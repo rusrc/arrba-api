@@ -1,0 +1,78 @@
+﻿@using Arrba.Domain.Models
+@using PagedList.Core.Mvc
+@model PagedList.Core.PagedList<City>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>List of cities</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<pager class="pager-container" list="@Model" options="@PagedListRenderOptions.Bootstrap4Full" />
+
+<table class="table">
+    @if (Model.Any())
+    {
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].Country)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].Alias)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].Weight)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].Region)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].NameMultiLangJson)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+    }
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Alias)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Region.ID)
+                </td>
+                <td>
+                    @(item.NameMultiLangJson != null ? "Yes" : "No")
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<pager class="pager-container" list="@Model" options="@PagedListRenderOptions.Bootstrap4Full" />

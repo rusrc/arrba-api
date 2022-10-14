@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="EntityFramework\PostgreSQL\AdHotRawRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Arrba.Domain\Arrba.Domain.csproj" />
+    <ProjectReference Include="..\Arrba.Extensions\Arrba.Extensions.csproj" />
+    <ProjectReference Include="..\Arrba.Services.Logger\Arrba.Services.Logger.csproj" />
+    <ProjectReference Include="..\Arrba.Services\Arrba.Services.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,489 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Arrba.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Arrba.Api.Controllers.BrandController">
+            <summary>
+            Brands
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.BrandController.#ctor(Arrba.Repositories.IUnitOfWork,AutoMapper.IMapper,Arrba.Services.Logger.ILogService)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.BrandController.GetBrandByBrandName(System.String)">
+            <summary>
+            Get brand by brandName
+            </summary>
+            <param name="brandName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.BrandController.GetByCategoryId(System.Int64)">
+            <summary>
+            Get Brands By CategoryId
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.BrandController.GetAll">
+            <summary>
+            Get all brands
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Arrba.Api.Controllers.CategoryController">
+            <summary>
+            Category
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.CategoryController.#ctor(Arrba.Repositories.IUnitOfWork,AutoMapper.IMapper,Arrba.Services.Logger.ILogService)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.CategoryController.Get(System.String)">
+            <summary>
+            Get category by alias
+            </summary>
+            <param name="alias"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.CategoryController.Get(System.Int64)">
+            <summary>
+            Get category by categoryId
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.CategoryController.Get">
+            <summary>
+            Get all categories
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Arrba.Api.Controllers.CityController">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.CityController.Get(System.Int64,System.Boolean)">
+            <summary>
+            Get all cities by countryId
+            </summary>
+            <param name="countryId"></param>
+            <param name="isActive">if true return active cities only</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.CityController.GetOrderedByWeight(System.Int32,System.Boolean)">
+            <summary>
+            Get all cities by ordered by weight
+            </summary>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.CityController.Get(System.String)">
+            <summary>
+            Get city by alias
+            </summary>
+            <param name="alias"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.CityController.GetCityByName(System.String)">
+            <summary>
+            Get city by name of city
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Arrba.Api.Controllers.CountryController">
+            <summary>
+            Country
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.CountryController.Get">
+            <summary>
+            Get all countries
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.CountryController.Get(System.Int64)">
+            <summary>
+            Get country by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Arrba.Api.Controllers.CurrencyController">
+            <summary>
+            Currency
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.CurrencyController.GetAllCurrencies">
+            <summary>
+            Get all currencies
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.CurrencyController.GetExchangeRate">
+            <summary>
+            Get exchange rates
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Arrba.Api.Controllers.DataMigrationController">
+            <summary>
+            Data migration
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.DealershipController.Get(System.String)">
+            <summary>
+            get dealership by name
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.DealershipController.Get(System.Int64)">
+            <summary>
+            get dealership by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.DealershipController.Get">
+            <summary>
+            get active dealerships
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.DiagnosticController.Ping">
+            <summary>
+            Ping
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.DiagnosticController.LoadCall1">
+            <summary>
+            Load call 1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.DiagnosticController.LoadCall2">
+            <summary>
+            Load call 1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.DiagnosticController.LoadCall3">
+            <summary>
+            Load call 1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.DiagnosticController.NotClosedConnection">
+            <summary>
+            Simulate the situation with exhausted connections
+            `The connection pool has been exhausted`
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.ItemTypeController.Get(System.Int64)">
+            <summary>
+            Get type by id
+            </summary>
+            <param name="id">type id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.ItemTypeController.GetByCategId(System.Int64,System.String)">
+            <summary>
+            get type by categoryId and type's name
+            </summary>
+            <param name="categoryId">categoryId</param>
+            <param name="name">English from or translatiration</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.ItemTypeController.GetByTypeIdAndCategId(System.Int64,System.Int64)">
+            <summary>
+            get type by categoryId and type's name
+            </summary>
+            <param name="categoryId">categoryId</param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.ItemTypeController.GetByCategId(System.Int64)">
+            <summary>
+            Get types by category id
+            </summary>
+            <param name="categoryId">categoryId</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.ItemTypeController.GetAllWithCategory">
+            <summary>
+            get all types with category
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.ModelController.GetByCategId(System.Int64,System.Int64)">
+            <summary>
+            Get Models By CategoryId And BrandId
+            </summary>
+            <param name="categoryId">categoryId</param>
+            <param name="brandId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.ModelController.GetByBrandId(System.Int64,System.String)">
+            <summary>
+            get model by brandId and model name
+            </summary>
+            <param name="brandId"></param>
+            <param name="modelName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.NewsController.Get(System.Int32)">
+            <summary>
+            get news
+            </summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.ProfileController.Get">
+            <summary>
+            get current profile of user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.ProfileController.Get(System.Int64)">
+            <summary>
+            get phone number by AdId
+            </summary>
+            <param name="adVehicleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.ProfileController.Delete(System.String)">
+            <summary>
+            delete phone number
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.ProfileController.GetAll(System.Int64)">
+            <summary>
+            get phone numbers by AdId
+            </summary>
+            <param name="adVehicleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.PropertyController.Get(System.Int64)">
+            <summary>
+            Get property by id
+            </summary>
+            <param name="id">property id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.PropertyController.Get(System.String)">
+            <summary>
+            get property by descripion name with like query
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.PropertyController.GetByCategoryId(System.Int64)">
+            <summary>
+            Get property by category id
+            </summary>
+            <param name="categoryId">categoryId</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.PropertyController.GetByCategoryIdWithCheckboxes(System.Int64)">
+            <summary>
+            Get property by category id with checkbloxes
+            </summary>
+            <param name="categoryId">categoryId</param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.RedisController.Ping">
+            <summary>
+            Check redis
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.RedisController.Post(System.String)">
+            <summary>
+            FlushDb
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.RoomController.Get(System.Nullable{System.Int64},System.Nullable{System.Int32},Arrba.Repositories.Enums.RoomSorter)">
+            <summary>
+            all items by sorter
+            </summary>
+            <param name="sorter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.RoomController.Get">
+            <summary>
+            get all user's items for filter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.RoomController.GetCountOfCategories(Arrba.Repositories.Enums.RoomSorter)">
+            <summary>
+            get count of categories by filter
+            </summary>
+            <param name="sorter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.RoomController.Post(Arrba.DTO.VehicleDto)">
+            <summary>
+            Edit the vehicle item
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.SignUpController.Post(Arrba.DTO.SignUpDto)">
+            <summary>
+            sign up
+            </summary>
+            <param name="model"></param>
+            <returns>Jwt token</returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.SitemapController.Get">
+            <summary>
+            generate sitemap.xml
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.SuperCategoryController.GetAllAsync">
+            <summary>
+            Get all super category
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.SuperCategoryController.GetSuperCategories(System.String)">
+            <summary>
+            Get SuperCategories object with brands and count of brands
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.TokenController.Post(Arrba.DTO.UserDto)">
+            <summary>
+            get token
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.TokenController.PostWithReCaptcha(Arrba.DTO.GrecaptchaDto)">
+            <summary>
+            get token with grecaptcha
+            </summary>
+            <param name="grecaptcha"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Arrba.Api.Controllers.VehicleController.Errors">
+            <summary>
+            Return errors form ModelState.Values.Errors
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.VehicleController.Get(System.Int64)">
+            <summary>
+            Get single vehicle
+            </summary>
+            <param name="adVehicleId"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Arrba.Api.Controllers.VehicleController.Get(System.Int64,System.Int64,System.Int64,System.Int64,System.Nullable{System.Int32})" -->
+        <member name="M:Arrba.Api.Controllers.VehicleController.Post(System.Nullable{System.Int32},System.Collections.Generic.KeyValuePair{System.String,System.String}[])">
+            <summary>
+            TODO change later
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.VehicleController.PostNoCity(System.String,System.Nullable{System.Int32},System.Collections.Generic.KeyValuePair{System.String,System.String}[])">
+            <summary>
+            TODO change later
+            Get vehicle list BrandName
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.VehicleController.PostNoCity(System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.KeyValuePair{System.String,System.String}[])">
+            <summary>
+            TODO change later
+            Get vehicle list BrandName
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.VehicleController.Post(System.String,System.Nullable{System.Int32},System.Collections.Generic.KeyValuePair{System.String,System.String}[])">
+            <summary>
+            TODO change later
+            Get vehicle list without brandName and modelName
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.VehicleController.Post(System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.KeyValuePair{System.String,System.String}[])">
+            <summary>
+            TODO change later
+            Get vehicle list BrandName
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.VehicleController.Post(System.String,System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.KeyValuePair{System.String,System.String}[])">
+            <summary>
+            TODO change later
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Arrba.Api.Controllers.VehicleController.Post(System.Int64,System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.KeyValuePair{System.String,System.String}[])">
+            <summary>
+            Get the list of AdVehicle
+            Use for complexe query
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Controllers.VehicleController.ReplaceParamsAsync(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            Solution to replace properties with names to propeties id. 
+            For proper query into sql database
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="M:Arrba.Api.Controllers.VehicleController.ReplaceParamsAsync(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Solution to replace properties with names to propeties id. 
+            For proper query into sql database
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Arrba.Api.Program">
+            <summary>
+            The program
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Program.Main(System.String[])">
+            <summary>
+            Main endpoint
+            </summary>
+        </member>
+        <member name="T:Arrba.Api.Startup">
+            <summary>
+            Startup class
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="P:Arrba.Api.Startup.Configuration">
+            <summary>
+            Configuration
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            ConfigureServices
+            </summary>
+        </member>
+        <member name="M:Arrba.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,Arrba.Domain.DbArrbaContext)">
+            <summary>
+            Configre
+            </summary>
+        </member>
+    </members>
+</doc>
